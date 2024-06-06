@@ -1,7 +1,5 @@
 ﻿import os
 
-__root = ".\Проект 3"
-
 __mark_flag = "_r"
 # помечаем файлы, которые будем перемещать, чтобы не было конфликт имён
 def __mark_files(root: str):
@@ -28,6 +26,6 @@ def __sort_images(root: str):
 
             os.rename(old_file_full_path, new_file_full_path)
 
-def sort_images():
-    __mark_files(__root)
-    __sort_images(__root)
+def sort_images(root: str):
+    __mark_files(root)
+    __sort_images(root)
